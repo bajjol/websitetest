@@ -1,0 +1,371 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Genspirasi</title>
+	<meta name="description" content="ehm" />
+	<meta name="keywords" content="html template, css, free, one page, gym, fitness, web design" />
+	<meta name="author" content="GENSPIRASI" />
+	<link rel="apple-touch-icon" sizes="57x57" href="{% static 'img/favicons/apple-touch-icon-57x57.png' %}">
+	<link rel="apple-touch-icon" sizes="60x60" href="{% static 'img/favicons/apple-touch-icon-60x60.png' %}">
+	<link rel="icon" type="image/png" href="{% static 'img/favicons/favicon-32x32.png' %}" sizes="32x32">
+	<link rel="icon" type="image/png" href="{% static 'img/favicons/favicon-16x16.png' %}" sizes="16x16">
+	<link rel="manifest" href="{% static 'img/favicons/manifest.json' %}">
+	<link rel="shortcut icon" href="{% static 'img/favicons/favicon.ico' %}">
+	<meta name="msapplication-TileColor" content="#00a8ff">
+	<meta name="msapplication-config" content="{% static 'img/favicons/browserconfig.xml' %}">
+	<meta name="theme-color" content="#ffffff">
+    <!-- menu CSS -->
+    <link href="{% static 'css/menu.css' %}" rel="stylesheet">
+	<!-- Normalize -->
+	<link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	<!-- Owl -->
+	<link rel="stylesheet" href="{% static 'css/owl.css' %}">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="{% static 'fonts/font-awesome-4.1.0/css/font-awesome.min.css' %}">
+	<!-- Elegant Icons -->
+	<link rel="stylesheet" href="{% static 'fonts/eleganticons/et-icons.css' %}">
+	<!-- Main style -->
+	<link rel="stylesheet" href="{% static 'css/a.css' %}">
+	<!-- Myslide -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/Slide.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet">
+  </head>
+  <body>
+
+	<header class="cd-header">
+        <div class="header-wrapper">
+            <div class="logo-wrap">
+                <a href="#" class="hover-target"><span>Gens</span>pirasi</a>
+            </div>
+            <div class="nav-but-wrap">
+                <div class="menu-icon hover-target">
+                    <span class="menu-icon__line menu-icon__line-left"></span>
+                    <span class="menu-icon__line"></span>
+                    <span class="menu-icon__line menu-icon__line-right"></span>
+                </div>
+            </div>
+        </div>
+   </header>
+	
+    <div class="nav">
+        <div class="nav__content">
+            <ul class="nav__list">
+                <li class="nav__list-item active-nav"><a>home</a></li>
+                <li class="nav__list-item"><a href="{% url 'article:article' %}" class="hover-target">Article</a></li>
+                <li class="nav__list-item"><a href="{% url 'video:video' %}" class="hover-target">Video</a></li>
+                <li class="nav__list-item"><a href="{% url 'merchandise:merchandise' %}" class="hover-target">Merchandise</a></li>
+            </ul>
+        </div>
+    </div>
+	
+		<section id="services" class="section section-padded" style="background:url({% static 'img/index/2.png' %}); background-size:cover">
+			<div class="container">
+				<div class="row text-center title">
+						<div><judul class="hover-target" style="font-family: 'Germania One', cursive;color:blue;font-size:80px">GENSPIRASI</judul></div>
+						<h4 class="light muted">Achieve the best results with our wide variety of lesson's training options!</h4>
+				</div>
+				<div class="row services">
+					<div style="width:25%;float:left">
+						<div class="service">
+							<div class="icon-holder">
+								<img style="width:100%" src="{% static 'img/index/bisnis.jpg' %}" alt="" class="icon">
+							</div>
+							<h4 class="heading">Business & Writing</h4>
+							<p class="description">Text</p>
+						</div>
+					</div>
+					<div style="width:25%;float:left">
+						<div class="service">
+							<div class="icon-holder">
+								<img src="{% static 'img/index/art.jpg' %}" alt="" class="icon">
+							</div>
+							<h4 class="heading">Art & Design</h4>
+							<p class="description">text</p>
+						</div>
+					</div>
+					<div style="width:25%;float:left">
+						<div class="service">
+							<div class="icon-holder">
+								<img src="{% static 'img/index/tech.jpg' %}" alt="" class="icon">
+							</div>
+							<h4 class="heading">Technology</h4>
+							<p class="description">text</p>
+						</div>
+					</div>
+					<div style="width:25%;float:left">
+						<div class="service">
+							<div class="icon-holder">
+								<img src="{% static 'img/index/p&f.jpg' %}" alt="" class="icon">
+							</div>
+							<h4 class="heading">Photography & Filmography</h4>
+							<p class="description">text</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cut cut-bottom"></div>
+		</section>
+		<section meta name="viewport" content="width=device-width, initial-scale=1">
+			<h1 style="text-align:center">
+				<judul class="hover-target" style="font-family: 'Germania One', cursive;font-size:80px">Watch & Learn</judul>
+			</h1>
+			<!-- Container for the image gallery --> 
+			<div class="container">
+				<!-- Full-width images with number text -->
+				<div class="mySlides" style="display: block;">
+					<div class="numbertext">1 / 3</div>
+						<video width="100%" controls>
+							<source src="{% static '/video/b.mp4' %}" type="video/mp4">
+						</video>
+					</div>
+				</div>
+				<div class="mySlides" style="display: block;">
+					<div class="numbertext">2 / 3</div>
+						<video width="100%" controls>
+							<source src="{% static '/video/c.mp4' %}" type="video/mp4">
+						</video>
+					</div>
+				</div>
+				<div class="mySlides" style="display: block;">
+					<div class="numbertext">3 / 3</div>
+						<video width="100%" controls>
+							<source src="{% static '/video/d.mp4' %}" type="video/mp4">
+						</video>
+					</div>
+				</div>
+				<!-- Next and previous buttons -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				  <!-- Image text -->
+				<div class="caption-container">
+					<p id="caption"></p>
+				</div>
+				<!-- Thumbnail images -->
+				<div class="row">
+					<div class="column">
+						<img class="demo" src={% static '/img/video/b.jpg' %} style="width:100%" onclick="currentSlide(1)" alt="Book">
+					</div>
+					<div class="column"> 
+						<img class="demo" src={% static '/img/video/c.jpg' %} style="width:100%" onclick="currentSlide(2)" alt="Photography">
+					</div>
+					<div class="column">
+						<img class="demo" src={% static '/img/video/d.jpg' %} style="width:100%" onclick="currentSlide(3)" alt="Work">
+					</div>
+				</div>
+			</div>
+		</section>
+			<section id="team" class="section gray-bg" style="background:url({% static 'img/index/2.png' %}); background-size:cover">
+			<div class="container">
+				<div class="row title text-center">
+					<div><judul class="hover-target margin-top" style="font-family: 'Germania One', cursive;color:blue;font-size:80px">Mentor</judul></div>
+					<h4 class="light muted">Achieve the best results with our wide variety of lesson's training options!</h4>
+					<h4 class="light muted">Lets built a good future!</h4>
+				</div>
+				<div class="row">
+					<div style="width:25%;float:left">
+						<div class="team text-center">
+							<div class="cover" style="background:url({% static 'img/mentor/business.jpg' %}); background-size:cover;">
+								<div class="overlay text-center">
+									<h3 class="white">Rp  .00</h3>
+									<h5 class="light light-white">All material / month</h5>
+								</div>
+							</div>
+							<img src="{% static 'img/team/team1.jpg' %}" alt="Team Image" class="avatar">
+							<div class="title">
+								<h4>Business & Writing</h4>
+								<h5 class="muted regular">Trainer</h5>
+							</div>
+							<button data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill">Sign Up Now</button>
+						</div>
+					</div>
+					<div style="width:25%;float:left">
+						<div class="team text-center">
+							<div class="cover" style="background:url({% static 'img/mentor/a&d.jpg' %}); background-size:cover;">
+								<div class="overlay text-center">
+									<h3 class="white">Rp  .00</h3>
+									<h5 class="light light-white">All material / month</h5>
+								</div>
+							</div>
+							<img src="{% static 'img/team/team2.jpg' %}" alt="Team Image" class="avatar">
+							<div class="title">
+								<h4>Art & Design</h4>
+								<h5 class="muted regular">Trainer</h5>
+							</div>
+							<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Sign Up Now</a>
+						</div>
+					</div>
+					<div style="width:25%;float:left">
+						<div class="team text-center">
+							<div class="cover" style="background:url({% static 'img/mentor/tech.jpeg' %}); background-size:cover;">
+								<div class="overlay text-center">
+									<h3 class="white">Rp  .00</h3>
+									<h5 class="light light-white">All material / month</h5>
+								</div>
+							</div>
+							<img src="{% static 'img/team/team3.jpg' %}" alt="Team Image" class="avatar">
+							<div class="title">
+								<h4>Technology</h4>
+								<h5 class="muted regular">Trainer</h5>
+							</div>
+							<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Sign Up Now</a>
+						</div>
+					</div>
+					<div style="width:25%;float:left">
+						<div class="team text-center">
+							<div class="cover" style="background:url({% static 'img/mentor/p&f.jpg' %}); background-size:cover;">
+								<div class="overlay text-center">
+									<h3 class="white">Rp  .00</h3>
+									<h5 class="light light-white">All material / month</h5>
+								</div>
+							</div>
+							<img src="{% static 'img/team/team4.jpg' %}" style="width:120px;height:120px" alt="Team Image" class="avatar">
+							<div class="title">
+								<h4>Photograpy & Filmography</h4>
+								<h5 class="muted regular">Trainer</h5>
+							</div>
+							<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Sign Up Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="services" class="section section-padded" style="background:url({% static 'img/index/2.png' %}); background-size:cover">
+			<div class="container">
+				<div class="row text-center title">
+					<div><judul class="hover-target margin-top" style="color:blue;font-size:80px">Premium Member</judul></div>
+					<h4 class="light muted">Be premium and get more education!</h4>
+				</div>
+				<div class="row no-margin">
+					<div class="col-md-7 no-padding col-md-offset-5 pricings text-center">
+						<div class="pricing">
+							<div class="box-main active" data-img="{% static 'img/pricing1.jpg' %}">
+								<h4 class="white">Free</h4>
+								<h4 class="white regular light">Rp  .00 <span class="small-font">/ Month</span></h4>
+								<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Sign Up Now</a>
+								<i class="info-icon icon_question"></i>
+							</div>
+							<div class="box-second active">
+								<ul class="white-list text-left">
+									<li>What member can get?</li>
+									<li>What member can get?</li>
+									<li>What member can get?</li>
+									<li>What member can get?</li>
+									<li>What member can get?</li>
+								</ul>
+							</div>
+						</div>
+						<div class="pricing">
+							<div class="box-main active" data-img="{% static 'img/pricing1.jpg' %}">
+								<h4 class="white">Premium</h4>
+								<h4 class="white regular light">Rp  .00 <span class="small-font">/ Month</span></h4>
+								<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Sign Up Now</a>
+								<i class="info-icon icon_question"></i>
+							</div>
+							<div class="box-second active">
+								<ul class="white-list text-left">
+									<li>What member can get?</li>
+									<li>What member can get?</li>
+									<li>What member can get?</li>
+									<li>What member can get?</li>
+									<li>What member can get?</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content modal-popup">
+					<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
+					<h3 class="white">Sign Up</h3>
+					<form action="" class="popup-form">
+						<input type="text" class="form-control form-white" placeholder="Full Name">
+						<input type="text" class="form-control form-white" placeholder="Email Address">
+						<div class="dropdown">
+							<button id="dLabel" class="form-control form-white dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Pricing Plan
+							</button>
+							<ul class="dropdown-menu animated fadeIn" role="menu" aria-labelledby="dLabel">
+								<li class="animated lightSpeedIn"><a href="#">1 month membership ($150)</a></li>
+								<li class="animated lightSpeedIn"><a href="#">3 month membership ($350)</a></li>
+								<li class="animated lightSpeedIn"><a href="#">1 year membership ($1000)</a></li>
+								<li class="animated lightSpeedIn"><a href="#">Free trial class</a></li>
+							</ul>
+						</div>
+						<div class="checkbox-holder text-left">
+							<div class="checkbox">
+								<input type="checkbox" value="None" id="squaredOne" name="check" />
+								<label for="squaredOne"><span>I Agree to the <strong>Terms &amp; Conditions</strong></span></label>
+							</div>
+						</div>
+						<button type="submit" class="btn btn-submit">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 text-center-mobile">
+						<h3 class="white">Reserve a Free Trial lesson!</h3>
+						<h5 class="light regular light-white">Grab a job and speed up your career!</h5>
+						<a href="#" class="btn btn-blue ripple trial-button">Start Free Trial</a>
+					</div>
+					<div class="col-sm-6 text-center-mobile">
+						<h3 class="white">Opening Hours <span class="open-blink"></span></h3>
+						<div class="row opening-hours">
+							<div class="col-sm-6 text-center-mobile">
+								<h5 class="light-white light">Mon - Fri</h5>
+								<h3 class="regular white">All time</h3>
+							</div>
+							<div class="col-sm-6 text-center-mobile">
+								<h5 class="light-white light">Sat - Sun</h5>
+								<h3 class="regular white">All time, but slow</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row bottom-footer text-center-mobile">
+					<div class="col-sm-8">
+						<p>&copy; 2019 All Rights Reserved. Powered by <a  style="color:#00CED1">Helpful IT Solver</a><a href="http://www.phir.co/"></a><a href="http://tympanus.net/codrops/"></a></p>
+					</div>
+					<div class="col-sm-4 text-right text-center-mobile">
+						<ul class="social-footer">
+							<li><a href="http://www.facebook.com/pages/Codrops/159107397912"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="http://www.twitter.com/codrops"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="https://plus.google.com/101095823814290637419"><i class="fa fa-google-plus"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Holder for mobile navigation -->
+		<div class="mobile-nav">
+			<ul></ul>
+			<a href="#" class="close-link"><i class="arrow_up"></i></a>
+		</div>
+	
+	    <div class='cursor' id="cursor"></div>
+	    <div class='cursor2' id="cursor2"></div>
+	    <div class='cursor3' id="cursor3"></div>
+	
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script src="{% static 'js/menu.js' %}"></script>
+		<script src="{% static 'js/slide.js' %}"></script>
+	  </body>
+</html>

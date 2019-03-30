@@ -1,0 +1,147 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Genspirasi</title>
+	<meta name="description" content="ehm" />
+	<meta name="keywords" content="html template, css, free, one page, gym, fitness, web design" />
+	<meta name="author" content="GENSPIRASI" />
+	<link rel="apple-touch-icon" sizes="57x57" href="{% static 'img/favicons/apple-touch-icon-57x57.png' %}">
+	<link rel="apple-touch-icon" sizes="60x60" href="{% static 'img/favicons/apple-touch-icon-60x60.png' %}">
+	<link rel="icon" type="image/png" href="{% static 'img/favicons/favicon-32x32.png' %}" sizes="32x32">
+	<link rel="icon" type="image/png" href="{% static 'img/favicons/favicon-16x16.png' %}" sizes="16x16">
+	<link rel="manifest" href="{% static 'img/favicons/manifest.json' %}">
+	<link rel="shortcut icon" href="{% static 'img/favicons/favicon.ico' %}">
+	<meta name="msapplication-TileColor" content="#00a8ff">
+	<meta name="msapplication-config" content="{% static 'img/favicons/browserconfig.xml' %}">
+	<meta name="theme-color" content="#ffffff">
+    <!-- menu CSS -->
+    <link href="{% static 'css/menu.css' %}" rel="stylesheet">
+	<!-- Normalize -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<!-- Owl -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/owl.css' %}">
+	<!-- Animate.css -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.1.0/css/font-awesome.min.css' %}">
+	<!-- Elegant Icons -->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/eleganticons/et-icons.css' %}">
+	<!-- Main style -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/cardio.css' %}">
+  </head>
+  <body>
+{% block content %}
+	<header class="cd-header">
+        <div class="header-wrapper">
+            <div class="logo-wrap">
+                <a href="#" class="hover-target"><span>Gens</span>pirasi</a>
+            </div>
+            <div class="nav-but-wrap">
+                <div class="menu-icon hover-target">
+                    <span class="menu-icon__line menu-icon__line-left"></span>
+                    <span class="menu-icon__line"></span>
+                    <span class="menu-icon__line menu-icon__line-right"></span>
+                </div>
+            </div>
+        </div>
+   </header>
+	
+    <div class="nav">
+        <div class="nav__content">
+            <ul class="nav__list">
+                <li class="nav__list-item"><a href="#" class="hover-target">home</a></li>
+                <li class="nav__list-item"><a href="{% url 'article:article' %}" class="hover-target">Article</a></li>
+                <li class="nav__list-item"><a href="{% url 'video:video' %}" class="hover-target">Video</a></li>
+                <li class="nav__list-item active-nav"><a>Merchandise</a></li>
+            </ul>
+        </div>
+    </div>
+    <section id="services" class="section section-padded" style="background:url({% static 'img/index/2.png' %}); background-size:cover">
+			<div class="container">
+				<div class="row text-center title">
+						<div><judul class="hover-target" style="font-family: 'Germania One', cursive;color:blue;font-size:80px">GENSPIRASI</judul></div>
+						<h4 class="light muted">Achieve the best results with our wide variety of lesson's training options!</h4>
+				</div>
+				<div class="row services">
+					<div style="width:25%;float:left">
+						<div class="service">
+							<div class="icon-holder">
+								<img src="{% static 'img/index/bisnis.jpg' %}" alt="" class="icon">
+							</div>
+							<h4 class="heading">Business & Writing</h4>
+							<p class="description">Text</p>
+						</div>
+					</div>
+					<div style="width:25%;float:left">
+						<div class="service">
+							<div class="icon-holder">
+								<img src="{% static 'img/index/art.jpg' %}" alt="" class="icon">
+							</div>
+							<h4 class="heading">Art & Design</h4>
+							<p class="description">text</p>
+						</div>
+					</div>
+					<div style="width:25%;float:left">
+						<div class="service">
+							<div class="icon-holder">
+								<img src="{% static 'img/index/tech.jpg' %}" alt="" class="icon">
+							</div>
+							<h4 class="heading">Technology</h4>
+							<p class="description">text</p>
+						</div>
+					</div>
+					<div style="width:25%;float:left">
+						<div class="service">
+							<div class="icon-holder">
+								<img src="{% static 'img/index/p&f.jpg' %}" alt="" class="icon">
+							</div>
+							<h4 class="heading">Photography & Filmography</h4>
+							<p class="description">text</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cut cut-bottom"></div>
+		</section>
+    <section id="services" class="section section-padded" style="background:url({% static 'img/index/2.png' %}); background-size:cover">
+		<div class="container">
+			<form method = "post" enctype="multipart/form-data"> 
+				{% csrf_token %} 
+				{{ form.as_p }} 
+				<button type="submit">Upload</button> 
+			</form> 
+
+			{% if uploaded_file_url %}
+				<p>File uploaded at: <a href="{% static 'video' %}">{{ uploaded_file_url }}</a></p>
+			{% endif %}
+
+			<p><a href="{% url 'merchandise:merchandise' %}">Return to home</a></p>
+		</div>
+	</section>
+	{% endblock %}
+	
+		<!-- Holder for mobile navigation -->
+		<div class="mobile-nav">
+			<ul></ul>
+			<a href="#" class="close-link"><i class="arrow_up"></i></a>
+		</div>
+	
+	    <div class='cursor' id="cursor"></div>
+	    <div class='cursor2' id="cursor2"></div>
+	    <div class='cursor3' id="cursor3"></div>
+	
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script src="{% static 'js/menu.js' %}"></script>
+	  </body>
+</html>

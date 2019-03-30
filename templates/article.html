@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Genspirasi</title>
+	<meta name="description" content="ehm" />
+	<meta name="keywords" content="html template, css, free, one page, gym, fitness, web design" />
+	<meta name="author" content="GENSPIRASI" />
+	<link rel="apple-touch-icon" sizes="57x57" href="{% static 'img/favicons/apple-touch-icon-57x57.png' %}">
+	<link rel="apple-touch-icon" sizes="60x60" href="{% static 'img/favicons/apple-touch-icon-60x60.png' %}">
+	<link rel="icon" type="image/png" href="{% static 'img/favicons/favicon-32x32.png' %}" sizes="32x32">
+	<link rel="icon" type="image/png" href="{% static 'img/favicons/favicon-16x16.png' %}" sizes="16x16">
+	<link rel="manifest" href="{% static 'img/favicons/manifest.json' %}">
+	<link rel="shortcut icon" href="{% static 'img/favicons/favicon.ico' %}">
+	<meta name="msapplication-TileColor" content="#00a8ff">
+	<meta name="msapplication-config" content="{% static 'img/favicons/browserconfig.xml' %}">
+	<meta name="theme-color" content="#ffffff">
+    <!-- menu CSS -->
+    <link href="{% static 'css/menu.css' %}" rel="stylesheet">
+	<!-- Normalize -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<!-- Owl -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/owl.css' %}">
+	<!-- Animate.css -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.1.0/css/font-awesome.min.css' %}">
+	<!-- Elegant Icons -->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/eleganticons/et-icons.css' %}">
+	<!-- Main style -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/cardio.css' %}">
+  </head>
+  <body>
+
+	<header class="cd-header">
+        <div class="header-wrapper">
+            <div class="logo-wrap">
+                <a href="#" class="hover-target"><span>Gens</span>pirasi</a>
+            </div>
+            <div class="nav-but-wrap">
+                <div class="menu-icon hover-target">
+                    <span class="menu-icon__line menu-icon__line-left"></span>
+                    <span class="menu-icon__line"></span>
+                    <span class="menu-icon__line menu-icon__line-right"></span>
+                </div>
+            </div>
+        </div>
+   </header>
+	
+    <div class="nav">
+        <div class="nav__content">
+            <ul class="nav__list">
+                <li class="nav__list-item"><a href="#" class="hover-target">home</a></li>
+                <li class="nav__list-item active-nav"><a>Article</a></li>
+                <li class="nav__list-item"><a href="{% url 'video:video' %}" class="hover-target">Video</a></li>
+                <li class="nav__list-item"><a href="{% url 'merchandise:merchandise' %}" class="hover-target">Merchandise</a></li>
+            </ul>
+        </div>
+    </div>
+		<!-- Holder for mobile navigation -->
+		<div class="mobile-nav">
+			<ul></ul>
+			<a href="#" class="close-link"><i class="arrow_up"></i></a>
+		</div>
+	
+	    <div class='cursor' id="cursor"></div>
+	    <div class='cursor2' id="cursor2"></div>
+	    <div class='cursor3' id="cursor3"></div>
+	
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script src="{% static 'js/menu.js' %}"></script>
+	  </body>
+</html>
